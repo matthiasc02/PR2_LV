@@ -29,7 +29,7 @@ public class Konto {
 	}
 	
 	public void debit(double amount) throws NotEnoughMoneyException{
-		if (balance-amount < overdraftFrame){
+		if (balance+overdraftFrame <amount){
 			throw new NotEnoughMoneyException("Rahmen überschritten");
 		}
 		else
