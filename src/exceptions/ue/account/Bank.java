@@ -30,9 +30,9 @@ public class Bank {
 				deb.debit(amount);
 				cre.credit(amount);
 			}
-		catch (NotEnoughMoneyException e)
+		catch (NotEnoughMoneyException exc)
 			{
-				throw new BankException("Zu Wenig Geld");
+				throw new BankException(exc);
 			}
 		 
 		 System.out.println(amount + " € von "+ fromOwner +  " an "+ toOwner + " Überwiesen");
