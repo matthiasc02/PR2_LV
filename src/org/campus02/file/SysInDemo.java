@@ -12,11 +12,12 @@ public class SysInDemo {
 
 	public static void main(String[] args) {
 		
-		BufferedReader br = null; // hier deklarieren, damit beim finally darauf zugegriffen werden kann
+		//BufferedReader br = null; // hier deklarieren, damit beim finally darauf zugegriffen werden kann
 			
-		try {
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) // kann gleich direkt zu beginn von try gemacht werden, nur bei implementiertne autoclose, dann kein finally nötig
+		{
 			File file = new File ("D://selbsteingelesen.txt");
-			br = new BufferedReader(new InputStreamReader(System.in));
+			//br = new BufferedReader(new InputStreamReader(System.in))		
 			FileWriter fw = new FileWriter(file, true); // mit dem true wird alles was neu ist angehängt
 			PrintWriter pw = new PrintWriter(fw);
 			
@@ -33,13 +34,16 @@ public class SysInDemo {
 		} 
 		catch(IOException ex){
 			ex.printStackTrace();
-		}finally {
+		}
+		/*
+		finally {
 			try {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-			}
+			}		
 		}
+		*/
 	}
 
 }
