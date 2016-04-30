@@ -21,6 +21,20 @@ public class Person {
 		result = prime * result + ((vorname == null) ? 0 : vorname.hashCode());
 		return result;
 	}
+	
+	
+
+	public String getVorname() {
+		return vorname;
+	}
+
+	public String getNachname() {
+		return nachname;
+	}
+
+	public String getOrt() {
+		return Ort;
+	}
 
 	@Override
 	public boolean equals(Object obj) {

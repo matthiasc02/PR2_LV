@@ -10,10 +10,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class PersonenManager {
-	//public ArrayList<Person> Liste = new ArrayList<>(); //zum testen für Ausgabe
+	private ArrayList<Person> Liste = new ArrayList<>();
 	
 	public void load(String path){
-		ArrayList<Person> Liste = new ArrayList<>();
 		BufferedReader br = null;
 			try {				
 				File f = new File(path);
@@ -51,5 +50,28 @@ public class PersonenManager {
 			
 
 	}
+	//seperates Ausgeben der Personen
+/*
+	public void save(String path){
+		try {
+			File f = new File(path);
+			FileWriter fw = new FileWriter(f, false); //false wird überschrieben, true wird angefügt
+			PrintWriter pw = new PrintWriter(fw);
+			
+			for (Person person : Liste.getPerson) {
+				pw.println(person.getVorname()+","+person.getNachname()+","+person.getOrt());
+			}
+			pw.flush();
+			pw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+*/
+	public ArrayList<Person> getListe() {
+		return Liste;
+	}
+
 
 }

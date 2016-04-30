@@ -7,7 +7,7 @@ public class Demo {
 		
 		PM.load("D://Personen.txt");
 		
-		//System.out.println(PM.Liste);
+		System.out.println(PM.getListe()); // entweder Public liste PM.Liste oder getter
 
 	}
 
