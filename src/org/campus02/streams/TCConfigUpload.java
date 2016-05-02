@@ -19,7 +19,7 @@ public class TCConfigUpload {
 		
 		InputStream inputStream = new FileInputStream("C:\\users\\mseidl\\Desktop\\user.ini");
 		Reader inputStreamReader = new InputStreamReader(inputStream);
-		OutputStream outputStream = new FileOutputStream("ftp://upccsr:rM_d83*xxQ@169.254.1.1/verzeichnis/user.ini");
+		OutputStream outputStream = new FileOutputStream("ftp://upccsr:****@169.254.1.1/dl/user.ini");
 		Writer outputStreamWriter = new OutputStreamWriter(outputStream, "UTF-8");
 		
 		int data = 0;
